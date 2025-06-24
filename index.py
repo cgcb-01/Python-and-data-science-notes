@@ -57,3 +57,14 @@ if x >= 10:
     print("Hello")
 else:
     print("Bye")
+
+# loops-> FOR LOOP
+# range(start,stop,step)
+for i in range(5, 1, -2):
+    print(i)
+for i in range(0, 6):  # default step =1
+    print(i)
+
+# while loop(while condition:)
+
+# LIST
