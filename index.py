@@ -67,7 +67,7 @@ for i in range(0, 6):  # default step =1
 
 # while loop(while condition:)
 
-# 1D,2D,3D list
+# 1D,2D,3D list (list can have any data types)
 # 2d list
 matrix=[
     [1,2,3],
@@ -77,10 +77,19 @@ matrix=[
 print(matrix)
 
 # nested list
-nested_list=['India','spain','Brazil',['West Bengal','Sikkim','Bihar','Jharkhand'],[['Howrah','Uluberia','Andul'],'Gangtok','Namchi','Kolkata']]
+nested_list=['India','spain','Brazil',['West Bengal','Sikkim','Bihar','Jharkhand'],[['Howrah','Uluberia','Andul'],'Gangtok','Namchi','Kolkata'],5,True,3333333.211]
 print(nested_list[0])
 print(nested_list[3][0:2])
 print(nested_list[4][0][0]+" "+nested_list[4][1])
 
 for i in range(0,len(nested_list),1) :
-    print(i+" : "+nested_list[i])
+    print(nested_list[i])
+
+# In Operator
+text="Hello World" # checks whether it contains or not 
+number=[1,2,3]
+result="llo" in text
+print(result)
+print(3 in number)
+
+# list Unpacking
