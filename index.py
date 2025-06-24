@@ -68,28 +68,50 @@ for i in range(0, 6):  # default step =1
 # while loop(while condition:)
 
 # 1D,2D,3D list (list can have any data types)
+# List are unordered and mutable(changeable)
 # 2d list
-matrix=[
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(matrix)
 
 # nested list
-nested_list=['India','spain','Brazil',['West Bengal','Sikkim','Bihar','Jharkhand'],[['Howrah','Uluberia','Andul'],'Gangtok','Namchi','Kolkata'],5,True,3333333.211]
+nested_list = [
+    "India",
+    "spain",
+    "Brazil",
+    ["West Bengal", "Sikkim", "Bihar", "Jharkhand"],
+    [["Howrah", "Uluberia", "Andul"], "Gangtok", "Namchi", "Kolkata"],
+    5,
+    True,
+    3333333.211,
+]
 print(nested_list[0])
 print(nested_list[3][0:2])
-print(nested_list[4][0][0]+" "+nested_list[4][1])
+print(nested_list[4][0][0] + " " + nested_list[4][1])
 
-for i in range(0,len(nested_list),1) :
+for i in range(0, len(nested_list), 1):
     print(nested_list[i])
 
 # In Operator
-text="Hello World" # checks whether it contains or not 
-number=[1,2,3]
-result="llo" in text
+text = "Hello World"  # checks whether it contains or not
+number = [1, 2, 3]
+result = "llo" in text
 print(result)
 print(3 in number)
 
 # list Unpacking
+# This allows us to split the elements in the list into multiple variables
+my_list=[1,2,3]
+a,b,c=my_list # unpacking
+print(b)
+
+lists=['Apple','Banana',['Orange','Pineapple']]
+a,b,c=lists
+print(c)
+print(a)
+
+Friends=["Sutapa","Sandipan","Prity","Shreya","Anwesha"]
+first,second,*rest=Friends # the star is necessary
+print(rest)
+print(second)
+
+
