@@ -67,4 +67,20 @@ for i in range(0, 6):  # default step =1
 
 # while loop(while condition:)
 
-# LIST
+# 1D,2D,3D list
+# 2d list
+matrix=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+print(matrix)
+
+# nested list
+nested_list=['India','spain','Brazil',['West Bengal','Sikkim','Bihar','Jharkhand'],[['Howrah','Uluberia','Andul'],'Gangtok','Namchi','Kolkata']]
+print(nested_list[0])
+print(nested_list[3][0:2])
+print(nested_list[4][0][0]+" "+nested_list[4][1])
+
+for i in range(0,len(nested_list),1) :
+    print(i+" : "+nested_list[i])
