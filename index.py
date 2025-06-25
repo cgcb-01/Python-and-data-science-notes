@@ -227,3 +227,27 @@ def outer_fuction(x):
 
 result_value=outer_fuction(10)
 print(result_value)
+
+#----------------- LAMBDA FUNCTION
+# lambda function is a small anonymous function that can take any number of arguments but can only have one expression.
+# It is used for short functions that are not reused.
+add = lambda x, y: x + y
+result = add(5, 3)
+print(result)
+
+# using Lambda function but applying filter to it
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+
+# Using lambda with map
+squared_numbers = map(lambda x: x ** 2, numbers) # This is a anonymous lambda function that takes the numbers in the number list square them ad map them with itself and gives the new map object. 
+squared_numbers = list(squared_numbers)  # Convert map object to list  
+print(squared_numbers)
+
+# applying lambda with functions
+# Function that takes another function as a parameter
+def apply_operation(x,y,operation):
+    return operation(x, y)
+result_addition=apply_operation(7,8,lambda a,b:a+b)
+print("Result of the addition:", result_addition)
