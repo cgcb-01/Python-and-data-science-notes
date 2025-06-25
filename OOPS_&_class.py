@@ -11,7 +11,7 @@ class Person:
     def talk(self):
         print("Hello, I am a Sutapa")
     # use of self parameter
-    def greet(self, name):
+    def greet(self):
         print(f"'Hello! I am {self.name}, and I am {self.age} years old. I live in {self.city}.")
         # self is a reference to the current instance of the class, allowing access to its attributes and methods.
         # it is used to differentiate between instance variables and local variables within class methods.
@@ -20,3 +20,4 @@ class Person:
 # Creating an instance of the class
 sutapa = Person("Jordan",20,"New York")  # Creating an instance of the Person class with specific attributes
 sutapa.talk()  # Calling the method of the class
+sutapa.greet()
