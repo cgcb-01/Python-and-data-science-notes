@@ -250,4 +250,20 @@ print(squared_numbers)
 def apply_operation(x,y,operation):
     return operation(x, y)
 result_addition=apply_operation(7,8,lambda a,b:a+b)
+result_multiplication=apply_operation(7,8,lambda a,b:a*b)
 print("Result of the addition:", result_addition)
+print("Result of the multiplication:",result_multiplication)
+
+# -------------MODULES
+import my_own_math as maths # here I am importing my module and giving it a alias 'math'
+maths.intro()
+print(maths.add(5, 3))
+print(maths.subtract(23.5,12))
+print(maths.multiply(5, 6))
+print(maths.divide(10, 2))       
+
+# importing a specific function from a module
+from my_own_math import (power,multiply)
+print("Power finding by my module:",power(2,3))
+print("Power finding by my module:",multiply(2,3))
+
