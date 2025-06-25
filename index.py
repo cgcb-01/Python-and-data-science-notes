@@ -10,7 +10,7 @@ print(pow_result)
 # user_inp = input("Enter Something: ")
 # print("You Entered:", user_inp)
 
-# Strings and its Formatting
+# ------------------Strings and its Formatting
 # double Quotes:"" or Single Quotes:'', For Multi line use:''' triple single quotes'''.
 multiline = """I am Sutapa.
 And I am 19 years old"""
@@ -27,12 +27,12 @@ print(f"2+2={2+2}")
 young = True
 print(f"name={type(name)},age={type(age)}, am i young?={type(young)}")
 
-# Type casting
+#------------------- Type casting
 # int(),float(),str(),bool()-just needs to put something will convert it into that data type.
 st = "Sutapa"
 print(bool(st))  # anything other than 0 is always true.
 
-# String Methods
+# --------------String Methods
 str = "I love Biriyani a lot"
 print(str.upper())  # to upper case
 print(str.lower())  # to lower case
@@ -41,24 +41,26 @@ print(str.title())  # capitalise all words first letter
 print(len(str))  # length of the string
 print(str[0:4])  # substring from 0 to 3 included here 4 is not included.
 
-# Comparison Operators
+print("hello there"+"!"*4) # **repeating 4 times
+
+# -------------Comparison Operators
 # == for equality, != not equal, < etc
 
-# LOGICAL OPERATORS
+# -------------LOGICAL OPERATORS
 # and & could also be written, not for not operation.
 
 print(True and True)
 print(True or False)
 print(not True)
 
-# Conditional Statement (else if== elif)
+# ---------------Conditional Statement (else if== elif)
 x = 5
 if x >= 10:
     print("Hello")
 else:
     print("Bye")
 
-# loops-> FOR LOOP
+# ----------loops-> FOR LOOP
 # range(start,stop,step)
 for i in range(5, 1, -2):
     print(i)
@@ -67,7 +69,7 @@ for i in range(0, 6):  # default step =1
 
 # while loop(while condition:)
 
-# 1D,2D,3D list (list can have any data types)
+#------------------ 1D,2D,3D list (list can have any data types)
 # List are unordered and mutable(changeable)
 # 2d list
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -91,7 +93,7 @@ print(nested_list[4][0][0] + " " + nested_list[4][1])
 for i in range(0, len(nested_list), 1):
     print(nested_list[i])
 
-# In Operator
+# ---------------In Operator
 text = "Hello World"  # checks whether it contains or not
 number = [1, 2, 3]
 result = "llo" in text
@@ -114,7 +116,8 @@ first,second,*rest=Friends # the star is necessary
 print(rest)
 print(second)
 
-# TUPLES (They are ordered and immutable-cant be edited)
+#--------------- TUPLES
+# (They are ordered and immutable-cant be edited)
 # It has paranthesis
 my_tuple=(1,2,3,'Hello',3.14)
 print(my_tuple)
@@ -136,7 +139,7 @@ print(type(number))
 for i in number:
     print(number)
     
-# DICTIONARY 
+#-------------------- DICTIONARY 
 # it has collection of key-value pairs where ech key Should be unique. It is unordered and mutable. Used for mapping
 
 #dictionary with key-value pair{key:value}
@@ -157,14 +160,70 @@ nested_dict={
 print(nested_dict)
 
 # making a dictionary using tuple
-tuple_list=[("name","Eva"),("Age",28),("city","Berlin")]
+tuple_list=[("Name","Eva"),("Age",28),("city","Berlin")]
 from_tuple_dict = dict(tuple_list)
 print(from_tuple_dict)
 
 # Accessing the elements
-print(from_tuple_dict['name'])
-print(from_tuple_dict['age'])
+print(from_tuple_dict['Name'])
+print(from_tuple_dict['Age']) # something unavailable not allowed
 
 # by get() method
-print(from_tuple_dict.get("location"))
-print(from_tuple_dict.get("Not Available"))
+print(from_tuple_dict.get("city"))
+print(from_tuple_dict.get("Not Available")) # something not available in dictionary is allowed
+
+print("Iterating through key in Dictionary:")
+mine_dict={'name': 'Eva', 'Age': 28, 'city': 'Berlin'}
+for key in mine_dict:
+    print(f"{key}:{mine_dict[key]}")
+
+print("Iterating through key,value in Dictionary:")
+for key,value in mine_dict.items():
+    print(f"{key}:{value}")
+
+# adding a new Key-Value Pair, Updating
+my_dict={'name': 'Eva', 'Age': 28}
+my_dict['city']="New York"
+my_dict['Age']=27
+print(my_dict)
+
+# updating with another dictionary
+update_dict={"name":"John","city":"Paris"}
+my_dict.update(update_dict)
+print(my_dict)
+
+# updating with keyword
+my_dict.update(age=29)
+
+
+# ----------------FUNCTIONS
+def greet(name,greet='Hello'):
+    print(f"{greet},{name}")
+
+greet("Sutapa")
+greet("sutapa","Hi! there")
+
+# named parameter
+def rec_area(length,width):
+    print(length*width)
+    
+rec_area(length=5,width=3)
+
+# return parameter
+def square_cube(x):
+    square=x**2
+    cube=x**3
+    return square,cube
+
+sq_result,cube_result=square_cube(2)
+print(sq_result,cube_result)
+
+#nested Function
+def outer_fuction(x):
+    def inner_fuction(y):
+        return x+y
+    result=inner_fuction(5)
+    return result
+
+result_value=outer_fuction(10)
+print(result_value)
