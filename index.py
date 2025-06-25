@@ -114,4 +114,57 @@ first,second,*rest=Friends # the star is necessary
 print(rest)
 print(second)
 
+# TUPLES (They are ordered and immutable-cant be edited)
+# It has paranthesis
+my_tuple=(1,2,3,'Hello',3.14)
+print(my_tuple)
+print(my_tuple[1])
+print(type(my_tuple))
 
+# my_tuple[0]=5 will give error as it is immutable
+# changing in another way
+# we can only concatenate
+new_tuple=my_tuple+(5,'Word')
+print(new_tuple) 
+Friend_tup=('Prity','Sandipan','Sutapa','Aasman','Anwesha','Ishita')
+for i in Friend_tup:
+    print(i)
+# even if we specify any paranthesis it becomes tuple
+# Few weird things
+number=1,2,3,4,5,6
+print(type(number))
+for i in number:
+    print(number)
+    
+# DICTIONARY 
+# it has collection of key-value pairs where ech key Should be unique. It is unordered and mutable. Used for mapping
+
+#dictionary with key-value pair{key:value}
+student_info={"name":"Sutapa","age":19,"grade":"A"}
+print(student_info)
+
+#using Dict Constructor
+person = dict(name="Sutapa", age=19, city="Howrah")
+print(person)
+
+mixed_dict={"name":"Charlie","age":21,"grades":[85,90,78],"is_student":True}
+print(mixed_dict)
+
+nested_dict={
+    "person":{"name":"David","age":22},
+    "location":{"city":"Paris", "Country":"France"}
+}
+print(nested_dict)
+
+# making a dictionary using tuple
+tuple_list=[("name","Eva"),("Age",28),("city","Berlin")]
+from_tuple_dict = dict(tuple_list)
+print(from_tuple_dict)
+
+# Accessing the elements
+print(from_tuple_dict['name'])
+print(from_tuple_dict['age'])
+
+# by get() method
+print(from_tuple_dict.get("location"))
+print(from_tuple_dict.get("Not Available"))
