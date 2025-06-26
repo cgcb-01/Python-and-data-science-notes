@@ -27,5 +27,16 @@
     "sideBar.foreground": "#ffffff", // ← text in sidebar
     "activityBarBadge.background": "#ffe100", // optional: yellow badges
     "activityBarBadge.foreground": "#000000"
+  },
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "foreground": "#0a6b0a" // bright green
+        }
+      }
+    ]
   }
 }
