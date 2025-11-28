@@ -1,0 +1,6 @@
+{
+  "git.ignoreLimitWarning": true,
+  "jupyter.allowUnauthorizedRemoteConnection": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode"
+}
